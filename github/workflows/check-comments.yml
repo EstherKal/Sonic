@@ -1,0 +1,23 @@
+name: Check Comments in English
+
+on:
+  pull_request:
+    paths:
+      - '**/*.js'  # Adjust to the relevant file types
+      - '**/*.py'
+
+jobs:
+  check-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run comment check script
+        run: |
+          python check_comments.py  # Adjust the script path if needed

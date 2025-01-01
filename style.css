@@ -1,0 +1,16 @@
+/* style.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    overflow: hidden;
+  }
+  
+  canvas {
+    border: 1px solid black;
+    background: #87CEEB;
+  }
+  

@@ -3,7 +3,7 @@ name: Check Comments in English
 on:
   pull_request:
     paths:
-      - '**/*.js'  # Adjust to the relevant file types
+      - '**/*.js'
       - '**/*.py'
 
 jobs:
@@ -20,4 +20,5 @@ jobs:
 
       - name: Run comment check script
         run: |
-          python check_comments.py  # Adjust the script path if needed
+          python check_comments.py
+        continue-on-error: false  # This ensures the PR fails if there are non-English comments
